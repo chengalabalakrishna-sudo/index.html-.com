@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GLOBAL AI LEARNING | Code with Bala Krishna</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#050816;
+  color:white;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(5,8,22,.95);
+  border-bottom:1px solid #26345c;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:bold;
+  color:#00eaff;
+}
+
+.logo span{
+  color:white;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:22px;
+  font-weight:bold;
+}
+
+nav a:hover{
+  color:#00eaff;
+}
+
+/* HERO */
+.hero{
+  min-height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:50px 20px;
+  background:
+    radial-gradient(circle at top,#173c75 0%,#050816 55%);
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.badge{
+  display:inline-block;
+  padding:9px 18px;
+  border:1px solid #00eaff;
+  border-radius:30px;
+  color:#00eaff;
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-size:64px;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:#00eaff;
+}
+
+.hero p{
+  font-size:20px;
+  color:#c9d4ee;
+  max-width:750px;
+  margin:auto;
+}
+
+.buttons{
+  margin-top:35px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 25px;
+  margin:8px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.primary{
+  background:#00eaff;
+  color:#03101a;
+}
+
+.secondary{
+  border:1px solid #00eaff;
+  color:#00eaff;
+}
+
+/* SECTIONS */
+section{
+  padding:80px 7%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.title h2{
+  font-size:40px;
+  color:#00eaff;
+  margin-bottom:10px;
+}
+
+.title p{
+  color:#aebbd5;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:#10182e;
+  padding:30px;
+  border-radius:16px;
+  border:1px solid #26345c;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#00eaff;
+}
+
+.icon{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  color:#00eaff;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:#b8c4dd;
+}
+
+/* AI SECTION */
+.ai-section{
+  background:#081027;
+}
+
+.ai-box{
+  max-width:1000px;
+  margin:auto;
+  padding:40px;
+  background:#10182e;
+  border:1px solid #26345c;
+  border-radius:20px;
+  text-align:center;
+}
+
+.ai-box h3{
+  font-size:30px;
+  color:#00eaff;
+  margin-bottom:15px;
+}
+
+.ai-box p{
+  color:#c5d0e5;
+}
+
+/* TECHNOLOGY */
+.tech-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+
+.tech{
+  padding:25px;
+  text-align:center;
+  background:#10182e;
+  border-radius:14px;
+  border:1px solid #26345c;
+}
+
+.tech h3{
+  color:#00eaff;
+}
+
+/* PROJECTS */
+.project{
+  background:#10182e;
+  padding:30px;
+  border-radius:16px;
+  border:1px solid #26345c;
+}
+
+.project h3{
+  color:#00eaff;
+  margin-bottom:10px;
+}
+
+/* ABOUT */
+.about{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.about p{
+  color:#c3cde0;
+  font-size:18px;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  background:#081027;
+}
+
+.contact p{
+  color:#c5d0e5;
+  margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 15px;
+  background:#03050d;
+  color:#8f9bb5;
+}
+
+footer strong{
+  color:#00eaff;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav a{
+    margin:0 6px;
+    font-size:14px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .title h2{
+    font-size:32px;
+  }
+
+  section{
+    padding:60px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+  <div class="logo">
+    GLOBAL <span>AI LEARNING</span>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#learning">Learning</a>
+    <a href="#ai">AI</a>
+    <a href="#technology">Technology</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+  </nav>
+
+</header>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      🚀 Future of Learning
+    </div>
+
+    <h1>
+      GLOBAL <span>AI LEARNING</span>
+    </h1>
+
+    <p>
+      Learn Artificial Intelligence, Coding, Web Development
+      and Future Technologies — all in one place.
+    </p>
+
+    <div class="buttons">
+      <a href="#learning" class="btn primary">
+        Start Learning
+      </a>
+
+      <a href="#projects" class="btn secondary">
+        Explore Projects
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- LEARNING -->
+<section id="learning">
+
+  <div class="title">
+
+    <h2>Learning Hub</h2>
+
+    <p>
+      Build your technology skills step by step.
+    </p>
+
+  </div>
+
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h3>Artificial Intelligence</h3>
+      <p>
+        Learn AI concepts, intelligent systems,
+        machine learning and modern AI tools.
+      </p>
+    </div>
+
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>Programming</h3>
+      <p>
+        Learn programming fundamentals and
+        build real-world applications.
+      </p>
+    </div>
+
+
+    <div class="card">
+      <div class="icon">🌐</div>
+      <h3>Web Development</h3>
+      <p>
+        Learn HTML, CSS and JavaScript
+        and create modern websites.
+      </p>
+    </div>
+
+
+    <div class="card">
+      <div class="icon">🧠</div>
+      <h3>Computer Science</h3>
+      <p>
+        Understand algorithms, data structures,
+        software and computing concepts.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- AI -->
+<section class="ai-section" id="ai">
+
+  <div class="title">
+
+    <h2>Artificial Intelligence</h2>
+
+    <p>
+      Explore the technology changing the future.
+    </p>
+
+  </div>
+
+
+  <div class="ai-box">
+
+    <h3>AI for Everyone 🌍</h3>
+
+    <p>
+      Artificial Intelligence helps computers learn,
+      understand information, recognize patterns and
+      solve complex problems.
+    </p>
+
+    <br>
+
+    <p>
+      GLOBAL AI LEARNING aims to make AI and technology
+      learning simple, practical and accessible.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- TECHNOLOGY -->
+<section id="technology">
+
+  <div class="title">
+
+    <h2>Technology</h2>
+
+    <p>
+      Technologies you can explore and learn.
+    </p>
+
+  </div>
+
+
+  <div class="tech-grid">
+
+    <div class="tech">
+      <div class="icon">🌐</div>
+      <h3>HTML</h3>
+    </div>
+
+    <div class="tech">
+      <div class="icon">🎨</div>
+      <h3>CSS</h3>
+    </div>
+
+    <div class="tech">
+      <div class="icon">⚡</div>
+      <h3>JavaScript</h3>
+    </div>
+
+    <div class="tech">
+      <div class="icon">🐍</div>
+      <h3>Python</h3>
+    </div>
+
+    <div class="tech">
+      <div class="icon">💻</div>
+      <h3>C Language</h3>
+    </div>
+
+    <div class="tech">
+      <div class="icon">🤖</div>
+      <h3>AI</h3>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+  <div class="title">
+
+    <h2>Projects</h2>
+
+    <p>
+      Learn by building.
+    </p>
+
+  </div>
+
+
+  <div class="cards">
+
+    <div class="project">
+      <h3>🤖 AI Learning Platform</h3>
+
+      <p>
+        A platform designed to introduce students
+        to Artificial Intelligence and technology.
+      </p>
+    </div>
+
+
+    <div class="project">
+      <h3>🌐 Website Development</h3>
+
+      <p>
+        Build responsive and modern websites
+        using HTML, CSS and JavaScript.
+      </p>
+    </div>
+
+
+    <div class="project">
+      <h3>🚀 Future Tech Projects</h3>
+
+      <p>
+        Explore creative technology projects,
+        automation and intelligent applications.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="about">
+
+    <div class="title">
+
+      <h2>About GLOBAL AI LEARNING</h2>
+
+    </div>
+
+    <p>
+      GLOBAL AI LEARNING is a technology learning project
+      created by Bala Krishna.
+    </p>
+
+    <br>
+
+    <p>
+      The goal is to learn, create and share knowledge
+      about Artificial Intelligence, programming,
+      websites and future technologies.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div class="title">
+
+    <h2>Start Your Journey</h2>
+
+    <p>
+      Learn today. Build tomorrow. Create the future.
+    </p>
+
+  </div>
+
+  <a href="#home" class="btn primary">
+    Back to Home
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <p>
+    © 2026 <strong>GLOBAL AI LEARNING</strong>
+  </p>
+
+  <p>
+    Code with Bala Krishna
+  </p>
+
+</footer>
+
+
+</body>
+</html>
